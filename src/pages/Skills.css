@@ -1,0 +1,126 @@
+.skills {
+  padding: 120px 80px;
+  background: #05050a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.skills-header p {
+  margin-top: 8px;
+  color: #9ca3af;
+  font-size: 17px;
+}
+
+/* Grid */
+.skills-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+ 
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.skills-grid.visible .skill-card {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.skill-card:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.skill-card:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.skill-card:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 20px rgb(84, 84, 238);
+}
+
+/* Title */
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 35px;
+  margin-bottom: 22px;
+}
+
+.skill-title h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tags span {
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 500;
+  color: #c7d2fe;
+
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skill-tags span:hover {
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skills {
+    padding: 100px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-header h2 {
+    font-size: 32px;
+  }
+}
